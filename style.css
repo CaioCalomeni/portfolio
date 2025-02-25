@@ -198,6 +198,9 @@ header{
     .imagem__caio {
         width: 80%;
     }
+    .rodape {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 450px) {
@@ -212,5 +215,8 @@ header{
     }
     .imagem__caio {
         width: 80%;
+    }
+    .rodape {
+        font-size: 1rem;
     }
 }
