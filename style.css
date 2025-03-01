@@ -5,6 +5,7 @@
     --cor-secundaria: #F6F6F6;
     --cor-terciaria: #22D4FD;
     --cor-hover: #272727;
+    --cor-projeto: #030507;
 
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -32,29 +33,24 @@ header{
     display: flex;
     margin: 0;
     height: 65px;
-    gap: 80px;
+    gap: 5%;
 }
-.menus_home {
+.menus_home, .menus_sobremim, .menus_projetos {
     text-decoration: none;
     color: var(--cor-terciaria);
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
     font-weight: 600;
 }
-.menus_sobremim {
-    text-decoration: none;
-    color: var(--cor-terciaria);
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
-    font-weight: 600;
-}
+
+/* MENUS ACABA AQUI */
+
 .titulo-destaque {
-    color: var(--cor-terciaria)
+    color: var(--cor-terciaria);
 }
 .apresentacao__conteudo__titulo {
     font-family: var(--fonte-primaria);
     font-size: 2.25rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
-    
 }
 .apresentacao {
     padding: 1% 15%;
@@ -63,20 +59,7 @@ header{
     justify-content: space-between;
     gap: 82px;
 }
-.apresentacao2 {
-    padding: 2% 15% 8% 15%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 82px;
-}
 .apresentacao__conteudo {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-.apresentacao__conteudo2 {
-    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -88,18 +71,6 @@ header{
     line-height: 36px;
     width: 90%;
     text-align: justify;
-}
-.apresentacao__conteudo__para2 {
-    font-size: 1.5rem;/*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
-    font-family: var(--fonte-secundaria);
-    font-weight: 400;
-    line-height: 36px;
-    width: 100%;
-    height: 0 auto;
-    text-align: justify;
-}
-.conteudo__para2 {
-    color: var(--cor-terciaria)
 }
 .redes {
     font-size: 1.5rem;/*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
@@ -142,6 +113,103 @@ header{
 .imagem__caio {
     width: 40%;
 }
+
+/* A PÁGINA SOBRE ACABA AQUI  */
+
+.apresentacao2 {
+    padding: 2% 15% 8% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.apresentacao__conteudo2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentacao__conteudo__para2 {
+    font-size: 1.5rem;/*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    line-height: 36px;
+    width: 100%;
+    height: 0 auto;
+    text-align: justify;
+}
+.conteudo__para2 {
+    color: var(--cor-terciaria)
+}
+
+/* A PÁGINA SOBRE  MIM ACABA AQUI */
+
+.projetos__sessao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 0 1em 2em 1em;
+}
+.projeto__bloco {
+    background-color: var(--cor-projeto);
+    color: #00ffff;
+    padding: 15px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+    width: 100%;
+    max-width: 330px; /* Largura máxima dos blocos */
+    height: 390px; /* Altura dos blocos */
+    flex: 1 1 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Garante que a imagem não saia do bloco */
+    text-decoration: none;
+  }
+  .projeto__bloco a {
+    display: block;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+  }
+  .projeto__bloco:hover {
+    transform: scale(1.05);
+  }
+.projeto__1:hover {
+    background-color: var(--cor-hover);
+    border: solid var(--cor-hover);
+}
+.projeto__nome {
+    font-family: var(--fonte-primaria);
+    color: var(--cor-terciaria);
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 6px;
+}
+.projeto__descricao {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-secundaria);
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: 6px;
+    text-decoration: none;
+    flex-grow: 1; /* Adiciona crescimento flexível para empurrar a imagem para baixo */
+}
+.imagem__projeto1 {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ajusta a imagem para caber no bloco sem ser cortada */
+    align-self: center; /* Centraliza a imagem horizontalmente */
+    margin-top: auto; /* Garante que a imagem fique na parte inferior do bloco */
+    border-radius: 3%;
+}
+
+/* A PÁGINA PROJETOS ACABA AQUI */
+
 .rodape {
     display: flex;
     align-items: center;
@@ -170,6 +238,17 @@ header{
         padding: 10% 0% 5% 0%;
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+    .menus_home, .menus_sobremim, .menus_projetos {
+        font-size: 1em;
+        width: 100%;
+        white-space: nowrap;
+    }
+    .menus {
+        gap: 15%;
+        justify-content: center;
+        align-items: center;
     }
     .imagem__caio {
         width: 75%;
@@ -197,6 +276,9 @@ header{
     }
     .imagem__caio {
         width: 80%;
+    }
+    .projetos__sessao {
+        gap: 0px;
     }
     .rodape {
         font-size: 1rem;
