@@ -4,7 +4,7 @@
     --cor-primaria: #000000;
     --cor-secundaria: #F6F6F6;
     --cor-terciaria: #22D4FD;
-    --cor-hover: #272727;
+    --cor-hover: #070b0f;
     --cor-projeto: #030507;
 
     --fonte-primaria: 'Krona One', sans-serif;
@@ -25,23 +25,46 @@ body {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }   
-header{
-    padding: 2% 0% 0% 15%
+nav {
+    background-color: var(--cor-hover);
+    overflow: hidden;
+    border-radius: 10px;  /* Bordas arredondadas para o menu */
+    margin: 1.25em auto;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para efeito mais estiloso */
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    display: flex;  /* Usando Flexbox para alinhar os itens em linha */
+    justify-content: center;  /* Centralizando os itens do menu */
 }
-.menus {
-    color: var(--cor-secundaria);
+nav a {
     display: flex;
-    margin: 0;
-    height: 65px;
-    gap: 5%;
+    align-items: center;  /* Alinhando os itens verticalmente no centro */
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border-radius: 10px;  /* Bordas arredondadas para os links */
+    margin: 5px;
 }
-.menus_home, .menus_sobremim, .menus_projetos {
+nav a:hover {
+    background-color: var(--cor-projeto);
+    color: var(--cor-terciaria);  /* Mudança de cor do texto ao passar o mouse */
+}
+/* .menus_home, .menus_sobremim, .menus_projetos {
     text-decoration: none;
     color: var(--cor-terciaria);
     font-family: var(--fonte-secundaria);
-    font-size: 1.5rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
-    font-weight: 600;
-}
+    font-size: 1.5rem; REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels. */
+    /* font-weight: 600;
+    transition: color 0.5s ease;
+} */
+/* .menus_home:hover, .menus_sobremim:hover, .menus_projetos:hover {
+    transform: scale(1.10);
+    color: var(--cor-se);
+} */
 
 /* MENUS ACABA AQUI */
 
@@ -108,7 +131,7 @@ header{
     font-weight: 600;
     }
 .apresentacao__links__link:hover {
-    background-color: var(--cor-hover)
+    transform: scale(1.05);
 }
 .imagem__caio {
     width: 40%;
@@ -168,20 +191,19 @@ header{
     justify-content: space-between;
     overflow: hidden; /* Garante que a imagem não saia do bloco */
     text-decoration: none;
+    transition: background-color 0.5s ease;
   }
   .projeto__bloco a {
     display: block;
     color: inherit;
     height: 100%;
     width: 100%;
+
   }
   .projeto__bloco:hover {
     transform: scale(1.05);
+    background-color: var(--cor-hover)
   }
-.projeto__1:hover {
-    background-color: var(--cor-hover);
-    border: solid var(--cor-hover);
-}
 .projeto__nome {
     font-family: var(--fonte-primaria);
     color: var(--cor-terciaria);
@@ -226,6 +248,15 @@ header{
 }
 
 @media (max-width: 1350px) {
+    nav {
+        width: 90%;
+        margin: 1em auto;
+    }
+    nav a {
+        padding: 10px 15px;
+        font-size: 16px;
+        margin: 3px;
+    }
     .apresentacao {
         flex-direction: column-reverse;
         padding: 1% 7% 10% 7%;
@@ -233,22 +264,6 @@ header{
     .apresentacao2 {
         flex-direction: column-reverse;
         padding: 1% 7% 10% 7%;
-    }
-    header {
-        padding: 10% 0% 5% 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .menus_home, .menus_sobremim, .menus_projetos {
-        font-size: 1em;
-        width: 100%;
-        white-space: nowrap;
-    }
-    .menus {
-        gap: 15%;
-        justify-content: center;
-        align-items: center;
     }
     .imagem__caio {
         width: 75%;
