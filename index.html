@@ -9,12 +9,42 @@
 </head>
 <body>
     <header>
-        <nav class="menus">
-            <a class="menus_home" href="index.html">Home</a>
-            <a class="menus_sobremim" href="sobre_mim.html">Sobre mim</a>
-            <a class="menus_projetos" href="projetos.html">Projetos</a>
-        </nav>
+        <div class="container__header">
+            <div class="logo">
+                <a href="index.html" class="link__logo">
+                    <h3 class="titulo__logo">CAIO CALOMENI</h3>
+                    <p class="texto__logo">Desenvolvedor</p>
+                </a>
+            </div>
+            <nav class="menus">
+                <a class="menus_home" href="index.html">Home</a>
+                <a class="menus_sobremim" href="sobre_mim.html">Sobre mim</a>
+                <a class="menus_projetos" href="projetos.html">Projetos</a>
+            </nav>
+            <nav class="menus contato">
+                <a class="link__contato" href="">Contato</a>
+            </nav>
+            <div class="mobile-menu-icon">
+                <button id="menuButton" onclick="menuShow()">
+                    <img src="Imagens/menu-fill.png" alt="">
+                </button>
+            </div>
+            
+            </div>
+
+            <div class="mobile-menu">
+                <ul class="lista-menus">
+                    <li class="nav-item"><a class="menu-item" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="menu-item" href="sobre_mim.html">Sobre mim</a></li>
+                    <li class="nav-item"><a class="menu-item" href="projetos.html">Projetos</a></li>
+                </ul>
+                <div class="mobile-link-contato">
+                    <a class="menu-item mobile-hover-contato" href="">Contato</a>
+                </div>
+            </div>
+        </div>
     </header>
+    <script src="script.js"></script>
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1>

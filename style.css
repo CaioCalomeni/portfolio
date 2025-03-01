@@ -24,21 +24,40 @@ body {
     height: 100vh;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
-}   
-nav {
+}
+.container__header {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+.link__logo {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+.logo:hover{
+    transform: scale(1.15);
+}
+.logo {
+    padding: 1em 2em;
+    transition: .5s;
+}
+.titulo__logo, .texto__logo {
+    text-align: center;
+    font-family: var(--fonte-primaria);
+}
+.menus, .lista-menus, .mobile-link-contato {
     background-color: var(--cor-hover);
     overflow: hidden;
     border-radius: 10px;  /* Bordas arredondadas para o menu */
-    margin: 1.25em auto;
+    margin: 1.5em 0.5em 1.5em 1.5em;
     width: fit-content;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para efeito mais estiloso */
     font-size: 1.25rem;
     font-family: var(--fonte-secundaria);
     font-weight: 600;
     display: flex;  /* Usando Flexbox para alinhar os itens em linha */
-    justify-content: center;  /* Centralizando os itens do menu */
 }
-nav a {
+nav a, div .menu-item {
     display: flex;
     align-items: center;  /* Alinhando os itens verticalmente no centro */
     color: white;
@@ -46,26 +65,24 @@ nav a {
     padding: 14px 20px;
     text-decoration: none;
     transition: background-color 0.5s ease, color 0.5s ease;
-    border-radius: 10px;  /* Bordas arredondadas para os links */
-    margin: 5px;
+}
+.contato {
+    margin: auto 2em;
+}
+.link__contato:hover, .mobile-hover-contato:hover {
+    background-color: red;
+    color: var(--cor-projeto);
 }
 nav a:hover {
     background-color: var(--cor-projeto);
     color: var(--cor-terciaria);  /* Mudança de cor do texto ao passar o mouse */
 }
-/* .menus_home, .menus_sobremim, .menus_projetos {
-    text-decoration: none;
-    color: var(--cor-terciaria);
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem; REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels. */
-    /* font-weight: 600;
-    transition: color 0.5s ease;
-} */
-/* .menus_home:hover, .menus_sobremim:hover, .menus_projetos:hover {
-    transform: scale(1.10);
-    color: var(--cor-se);
-} */
-
+.mobile-menu-icon {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
 /* MENUS ACABA AQUI */
 
 .titulo-destaque {
@@ -76,7 +93,7 @@ nav a:hover {
     font-size: 2.25rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
 }
 .apresentacao {
-    padding: 1% 15%;
+    padding: 1% 15% 10% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,6 +146,7 @@ nav a:hover {
     text-decoration: none;
     color: var(--cor-secundaria);
     font-weight: 600;
+    transition: .5s;
     }
 .apresentacao__links__link:hover {
     transform: scale(1.05);
@@ -192,13 +210,13 @@ nav a:hover {
     overflow: hidden; /* Garante que a imagem não saia do bloco */
     text-decoration: none;
     transition: background-color 0.5s ease;
+    transition: .5s;
   }
   .projeto__bloco a {
     display: block;
     color: inherit;
     height: 100%;
     width: 100%;
-
   }
   .projeto__bloco:hover {
     transform: scale(1.05);
@@ -241,21 +259,58 @@ nav a:hover {
     color: var(--cor-primaria);
     margin-top: auto;
     width: 100%;
-    height: 60px;
+    height: 30px;
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;/*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 24 pixels.*/
     font-weight: 600;
 }
 
 @media (max-width: 1350px) {
-    nav {
-        width: 90%;
-        margin: 1em auto;
+    .titulo__logo, .texto__logo {
+        font-size: 0.75em;;
     }
-    nav a {
-        padding: 10px 15px;
-        font-size: 16px;
-        margin: 3px;
+    nav a, div .menu-item { 
+        transition: none;
+        justify-content: center;
+        box-shadow: 0px -5px 14px rgba(0, 0, 0, 0.2); 
+    }
+    .menus, .mobile-button-contato {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background: transparent;
+        margin: 2em;
+        border: 0;
+        box-shadow: none;
+    } 
+    .mobile-menu-icon button img {
+        transition: filter 0.3s ease;  /* Transição suave da cor */
+    }
+    .mobile-menu-icon button.clique img {
+        filter: brightness(0) saturate(100%) invert(71%) sepia(41%) saturate(393%) hue-rotate(145deg) brightness(103%) contrast(98%);
+    }
+    
+    .lista-menus, .mobile-link-contato {
+        display: flex;
+        width: 90%;
+        flex-direction: column;
+        text-align: center;
+        margin: 1em;
+        font-size: 1em;
+        align-content: center;
+    }
+    .mobile-menu, .nav-item {
+        display: none; 
+        color: var(--cor-secundaria);
+    }
+    .mobile-menu, .mobile-button-contato {
+        display: none;
+    }
+    .mobile-menu.open, .nav-item, .mobile-button-contato {
+        display: block; /* Certificando que os itens aparecem */
     }
     .apresentacao {
         flex-direction: column-reverse;
