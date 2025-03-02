@@ -90,8 +90,7 @@ nav a:hover {
 }
 .apresentacao__conteudo__titulo {
     font-family: var(--fonte-primaria);
-    font-size: 2rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
-    text-align: center;
+    font-size: 2.25rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
 }
 .apresentacao {
     padding: 1% 15% 10% 15%;
@@ -321,6 +320,11 @@ nav a:hover {
     .mobile-menu.open, .nav-item, .mobile-button-contato {
         display: block; /* Certificando que os itens aparecem */
     }
+    .apresentacao__conteudo__titulo {
+    font-family: var(--fonte-primaria);
+    font-size: 2rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
+    text-align: center;
+}
     .apresentacao {
         flex-direction: column-reverse;
         padding: 1% 7% 10% 7%;
