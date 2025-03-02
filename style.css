@@ -69,8 +69,8 @@ nav a, div .menu-item {
 .contato {
     margin: auto 2em;
 }
-.link__contato:hover, .mobile-hover-contato:hover {
-    background-color: red;
+.link__contato:hover, .mobile-hover-contato:hover, .menu-item:hover {
+    background-color: var(--cor-terciaria);
     color: var(--cor-projeto);
 }
 nav a:hover {
@@ -295,12 +295,16 @@ nav a:hover {
     
     .lista-menus, .mobile-link-contato {
         display: flex;
-        width: 90%;
+        width: 92%;
         flex-direction: column;
         text-align: center;
         margin: 1em;
         font-size: 1em;
         align-content: center;
+    }
+    a.menu-item.mobile-hover-contato {
+        background-color: var(--cor-terciaria);
+        color: black;
     }
     .mobile-menu, .nav-item {
         display: none; 
