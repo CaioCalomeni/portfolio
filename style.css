@@ -322,7 +322,7 @@ nav a:hover {
     }
     .apresentacao__conteudo__titulo {
     font-family: var(--fonte-primaria);
-    font-size: 2rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
+    font-size: 1.8rem; /*REM é utilizada para a melhor responsividade. O calculo é pegar a quantidade de pixel e dividir por 16. Aqui era 36 pixels.*/
     text-align: center;
 }
     .apresentacao {
