@@ -306,6 +306,10 @@ nav a:hover {
         background-color: var(--cor-terciaria);
         color: black;
     }
+    a.menu-item.mobile-hover-contato:hover {
+        background-color: var(--cor-projeto);
+        color: white;
+    }
     .mobile-menu, .nav-item {
         display: none; 
         color: var(--cor-secundaria);
