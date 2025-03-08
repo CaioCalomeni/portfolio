@@ -283,6 +283,7 @@ nav a:hover {
       margin: 1em;
       font-size: 1em;
       align-content: center;
+      background-color: var(--cor-hover);
   }
   a.menu-item.mobile-hover-contato {
       background-color: var(--cor-terciaria);
@@ -302,5 +303,7 @@ nav a:hover {
   .mobile-menu.open, .nav-item, .mobile-button-contato {
       display: block; /* Certificando que os itens aparecem */
   }
-
+  .projetos__card {
+  background-color: var(--cor-hover);
+  }
 }
