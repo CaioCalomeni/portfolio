@@ -6,7 +6,6 @@
     --cor-terciaria: #22D4FD;
     --cor-bloco: #070b0f;
     --cor-hover: #0e161f;
-    --cor-projeto: #030507;
     --cor-cinza: #808080;
 
     --fonte-primaria: 'Krona One', sans-serif;
@@ -75,7 +74,7 @@ nav a, div .menu-item {
     }
 .link__contato:hover, .mobile-hover-contato:hover, .menu-item:hover {
     background-color: var(--cor-terciaria);
-    color: var(--cor-projeto);
+    color: var(--cor-primaria);
 }
 nav a:hover {
     background-color: var(--cor-hover);
@@ -176,14 +175,14 @@ nav a:hover {
         text-align: center;
         margin: 1em;
         font-size: 1em;
-        align-content: center;
+        background-color: var(--cor-hover);
     }
     a.menu-item.mobile-hover-contato {
         background-color: var(--cor-terciaria);
         color: black;
     }
     a.menu-item.mobile-hover-contato:hover {
-        background-color: var(--cor-projeto);
+        background-color: var(--cor-primaria);
         color: white;
     }
     .mobile-menu, .nav-item {
