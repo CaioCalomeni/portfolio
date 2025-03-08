@@ -198,12 +198,11 @@ nav a:hover {
     }
     .apresentacao2 {
         flex-direction: column-reverse;
-        padding: 1% 7% 10% 7%;
-        gap: 82px;
+        padding: 5% 7% 10% 7%;
+        gap: 35px;
     }
     .imagem__caio {
         width: 75%;
-        margin-bottom: 30px;
     }
     .apresentacao__conteudo__para2 {
         width: 100%;
