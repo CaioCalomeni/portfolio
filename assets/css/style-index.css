@@ -196,7 +196,7 @@ nav a:hover {
     }
     .apresentacao {
         flex-direction: column-reverse;
-        padding: 1% 5% 5% 5%;
+        padding: 5%;
         gap: 35px;
         justify-content: flex-end;
     }
