@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caio Calomeni | Projetos</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style-projetos.css">
+
 </head>
 <body>
     <header>
@@ -15,14 +16,16 @@
                     <p class="texto__logo">Desenvolvedor</p>
                 </a>
             </div>
-            <nav class="menus">
-                <a class="menus_home" href="index.html">Início</a>
-                <a class="menus_sobremim" href="sobre_mim.html">Sobre mim</a>
-                <a class="menus_projetos" href="projetos.html">Projetos</a>
+            <div class="container__menus">
+                <nav class="menus">
+                    <a class="menus_home" href="index.html">Início</a>
+                    <a class="menus_sobremim" href="sobre_mim.html">Sobre mim</a>
+                    <a class="menus_projetos" href="projetos.html">Projetos</a>
             </nav>
             <nav class="menus contato">
-                <a class="link__contato" href="">Contato</a>
+                <a class="link__contato" href="contato.html">Contato</a>
             </nav>
+            </div>
             <div class="mobile-menu-icon">
                 <button id="menuButton" onclick="menuShow()">
                     <img src="Imagens/menu-fill.png" alt="">
@@ -37,45 +40,155 @@
                     <li class="nav-item"><a class="menu-item" href="projetos.html">Projetos</a></li>
                 </ul>
                 <div class="mobile-link-contato">
-                    <a class="menu-item mobile-hover-contato" href="">Contato</a>
+                    <a class="menu-item mobile-hover-contato" href="contato.html">Contato</a>
                 </div>
             </div>
         </div>
     </header>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
     <main>
-        <section class="projetos__sessao">
-            <a class="projeto__bloco" href="index.html">
-                <div><h2 class="projeto__nome">Portfólio</h2></div>
-                <div><p class="projeto__descricao">Meu próprio portfólio</p></div>
-                <img class="imagem__projeto1" src="Imagens/teste.png" alt="">
-            </a>
 
-            <a class="projeto__bloco" href="https://metflix-metplus.vercel.app/">
-                <div><h2 class="projeto__nome">Metflix & Metplus</h2></div>
-                <div><p class="projeto__descricao">Uma plataforma de streaming</p></div>
-                <img class="imagem__projeto1" src="Imagens/Metflix.png" alt="">
-            </a>
+<!-- /*=============== PROJETOS ===============*/ -->
+        <h2 class="section__title">Projetos Recentes</h2>
+        
+        <section class="projetos-section" id="projects">
+        
+            <div class="projetos-container">
+                <article class="projetos__card">
+                    <a href="index.html" class="projetos__imagem">
+                        <img src="Imagens/teste (1).png" alt="image" class="projetos__img">
+                    </a>
 
-            <a class="projeto__bloco" href="">
-                <div><h2 class="projeto__nome">Projeto</h2></div>
-                <div><p class="projeto__descricao">Descrição do projeto</p></div>
-                <img class="imagem__projeto1" src="Imagens/noimage.png" alt="">
-            </a>
+                    <div class="projects__data">
+                        <h3 class="projects__name">Portfólio</h3>
+                        <p class="projects__description">Meu próprio portfólio</p>
+                    </div>
 
-            <a class="projeto__bloco" href="">
-                <div><h2 class="projeto__nome">Projeto</h2></div>
-                <div><p class="projeto__descricao">Descrição do projeto</p></div>
-                <img class="imagem__projeto1" src="Imagens/noimage.png" alt="">
-            </a>
+                    <div class="container_projects__skills">
+                        <div class="projects__skills">
+                            <img src="Imagens/html-5.png" alt="html-5" class="projects__skill">
+                            <img src="Imagens/css-3.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/Javascript.png" alt="Javascript" class="projects__skill">
+                            <img src="Imagens/photoshop.png" alt="Photoshop" class="projects__skill">
+                        </div>
+                    </div>
 
-            <a class="projeto__bloco" href="">
-                <div><h2 class="projeto__nome">Projeto</h2></div>
-                <div><p class="projeto__descricao">Descrição do projeto</p></div>
-                <img class="imagem__projeto1" src="Imagens/noimage.png" alt="">
-            </a>
+                    <a href="index.html" class="projects__button" target="_blank">
+                        <img src="Imagens/link.png" alt="" class="ri-link">
+                        <span>Visite o projeto</span>
+                    </a>
+                </article>
+            </div>
 
-            
+            <div class="projetos-container">
+                <article class="projetos__card">
+                    <a href="https://metflix-metplus.vercel.app/" target="_blank" class="projetos__imagem">
+                        <img src="Imagens/Metflix.png" alt="image" class="projetos__img">
+                    </a>
+
+                    <div class="projects__data">
+                        <h3 class="projects__name">Metflix & Metplus</h3>
+                        <p class="projects__description">Landing page de uma streaming</p>
+                    </div>
+
+                    <div class="container_projects__skills">
+                        <!-- <div class="skill-texto"><p>Ferramentas</p></div> -->
+                        <div class="projects__skills">
+                            <img src="Imagens/html-5.png" alt="html-5" class="projects__skill">
+                            <img src="Imagens/css-3.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/photoshop.png" alt="Photoshop" class="projects__skill">
+                        </div>
+                    </div>
+
+                    <a href="https://metflix-metplus.vercel.app/" class="projects__button" target="_blank">
+                        <img src="Imagens/link.png" alt="" class="ri-link">
+                        <span>Visite o projeto</span>
+                    </a>
+                </article>
+            </div>
+
+            <div class="projetos-container">
+                <article class="projetos__card">
+                    <a href="" target="_blank" class="projetos__imagem">
+                        <img src="Imagens/noimage.png" alt="image" class="projetos__img">
+                    </a>
+
+                    <div class="projects__data">
+                        <h3 class="projects__name">Projeto</h3>
+                        <p class="projects__description">Descrição</p>
+                    </div>
+
+                    <div class="container_projects__skills">
+                        <div class="projects__skills">
+                            <img src="Imagens/html-5.png" alt="html-5" class="projects__skill">
+                            <img src="Imagens/css-3.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/Javascript.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/photoshop.png" alt="Photoshop" class="projects__skill">
+                        </div>
+                    </div>
+ 
+                    <a href="" class="projects__button" target="_blank">
+                        <img src="Imagens/link.png" alt="" class="ri-link">
+                        <span>Visite o projeto</span>
+                    </a>
+                </article>
+            </div>
+
+            <div class="projetos-container">
+                <article class="projetos__card">
+                    <a href="" target="_blank" class="projetos__imagem">
+                        <img src="Imagens/noimage.png" alt="image" class="projetos__img">
+                    </a>
+
+                    <div class="projects__data">
+                        <h3 class="projects__name">Projeto</h3>
+                        <p class="projects__description">Descrição</p>
+                    </div>
+
+                    <div class="container_projects__skills">
+                        <div class="projects__skills">
+                            <img src="Imagens/html-5.png" alt="html-5" class="projects__skill">
+                            <img src="Imagens/css-3.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/Javascript.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/photoshop.png" alt="Photoshop" class="projects__skill">
+                        </div>
+                    </div>
+ 
+                    <a href="" class="projects__button" target="_blank">
+                        <img src="Imagens/link.png" alt="" class="ri-link">
+                        <span>Visite o projeto</span>
+                    </a>
+                </article>
+            </div>
+
+            <div class="projetos-container">
+                <article class="projetos__card">
+                    <a href="" target="_blank" class="projetos__imagem">
+                        <img src="Imagens/noimage.png" alt="image" class="projetos__img">
+                    </a>
+
+                    <div class="projects__data">
+                        <h3 class="projects__name">Projeto</h3>
+                        <p class="projects__description">Descrição</p>
+                    </div>
+
+                    <div class="container_projects__skills">
+                        <div class="projects__skills">
+                            <img src="Imagens/html-5.png" alt="html-5" class="projects__skill">
+                            <img src="Imagens/css-3.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/Javascript.png" alt="css-3" class="projects__skill">
+                            <img src="Imagens/photoshop.png" alt="Photoshop" class="projects__skill">
+                        </div>
+                    </div>
+ 
+                    <a href="" class="projects__button" target="_blank">
+                        <img src="Imagens/link.png" alt="" class="ri-link">
+                        <span>Visite o projeto</span>
+                    </a>
+                </article>
+            </div>
+
+        </section>
 
     </main>
     <footer>

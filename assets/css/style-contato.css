@@ -1,0 +1,327 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*=============== VARIAVEIS CSS ===============*/
+:root {
+
+  /*========== FONTE E TIPOGRAFIA ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --fonte-primaria: 'Krona One', sans-serif;  /*Essa fonte é do LOGO*/
+  --fonte-secundaria: 'Montserrat', sans-serif; /*Essa fonte é do MENU*/
+
+  --body-font: "Montserrat Alternates", sans-serif;
+  --second-font: "Grechen Fuemen", cursive;
+
+  /*========== MENU ==========*/
+  --cor-primaria: #000000;
+  --cor-secundaria: #F6F6F6;
+  --cor-terciaria: #22D4FD;
+  --cor-bloco: #070b0f;
+  --cor-hover: #0e161f;
+  --cor-cinza: #808080;
+
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body,
+input,
+textarea,
+button {
+  font-family: var(--fonte-secundaria);
+  font-size: 1rem;
+}
+
+body {
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+
+input,
+button,
+textarea {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*=============== CLASSES CSS REUTILIZÁVEIS ===============*/
+  .main {
+    overflow: hidden;
+  }
+
+/*=============== HEADER ===============*/
+  .container__header {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+  .link__logo {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+  }
+  .logo:hover{
+    transform: scale(1.05);
+  }
+  .logo {
+    padding: 1em 2em;
+    transition: .5s;
+  }
+  .titulo__logo, .texto__logo {
+    text-align: center;
+    font-family: var(--fonte-primaria);
+  }
+  .menus, .lista-menus, .mobile-link-contato {
+    background-color: var(--cor-bloco);
+    overflow: hidden;
+    border-radius: 10px;  /* Bordas arredondadas para o menu */
+    margin: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para efeito mais estiloso */
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    display: flex;  /* Usando Flexbox para alinhar os itens em linha */
+  }
+  .container__menus {
+    display: flex;
+  }
+  nav a, div .menu-item {
+    display: flex;
+    align-items: center;  /* Alinhando os itens verticalmente no centro */
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  .contato {
+  margin-right: 3em;
+  }
+  .link__contato:hover, .mobile-hover-contato:hover, .menu-item:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-bloco);
+  }
+  nav a:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-terciaria);  /* Mudança de cor do texto ao passar o mouse */
+  }
+  .mobile-menu-icon {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  
+  /*=============== CONTATOS ===============*/
+.container__contato {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 1em;
+  margin-top: 2em;
+}
+.redes {
+  font-size: 2.5rem;
+  font-family: var(--fonte-secundaria);
+  font-weight: 600;
+  line-height: 36px;
+  width: 100%;
+  height: 32px;
+  text-align: center;
+}
+.apresentacao__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.apresentacao__links__link {
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+  background-color: var(--cor-primaria);
+  border: 2px solid var(--cor-terciaria);
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 16px ;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  transition: .5s;
+  }
+.apresentacao__links__link:hover {
+  transform: scale(1.05);
+}
+
+.container-form form {
+  background-color: var(--cor-bloco);
+  margin-right: 3.5em;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+.titulo-contato {
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+.contato-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.contato-box textarea {
+  grid-column: 1 / -1;
+  height: 15rem;
+  resize: none;
+  margin-bottom: 1.5em;
+}
+.contato-box textarea,
+.contato-box input {
+  padding: 1rem;
+  background-color: var(--cor-primaria);
+  border: .15rem solid var(--cor-primaria);
+  border-radius: .6rem;
+  font-size: 1rem;
+  color: var(--cor-secundaria);
+}
+.contato-box textarea:focus,
+.contato-box input:focus {
+  border-color: var(--cor-terciaria);
+}
+.btn {
+  display: inline-block;
+  padding: .2rem 2rem;
+  background: var(--cor-terciaria);
+  border: .15rem solid var(--cor-terciaria);
+  border-radius: .5rem;
+  box-shadow: 0 0 .2rem var(--cor-terciaria);
+  font-size: 1rem;
+  color: var(--cor-primaria);
+  font-weight: 600;
+  transition: .5s;
+  font-family: var(--fonte-secundaria);
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--cor-secundaria);
+  box-shadow: none;
+}
+
+  /*=============== RESPONSIVIDADE ===============*/
+
+  @media (max-width: 1350px) {
+    .titulo__logo, .texto__logo {
+        font-size: 0.75em;;
+    }
+    nav a, div .menu-item { 
+        transition: none;
+        justify-content: center;
+        box-shadow: 0px -5px 14px rgba(0, 0, 0, 0.2); 
+    }
+    .menus, .mobile-button-contato {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background: transparent;
+        margin: 2em;
+        border: 0;
+        box-shadow: none;
+    } 
+    .mobile-menu-icon button img {
+        transition: filter 0.3s ease;  /* Transição suave da cor */
+    }
+    .mobile-menu-icon button.clique img {
+        filter: brightness(0) saturate(100%) invert(71%) sepia(41%) saturate(393%) hue-rotate(145deg) brightness(103%) contrast(98%);
+    }
+    
+    .lista-menus, .mobile-link-contato {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 1em;
+        font-size: 1em;
+        align-content: center;
+    }
+    a.menu-item.mobile-hover-contato {
+        background-color: var(--cor-terciaria);
+        color: var(--cor-primaria)
+    }
+    a.menu-item.mobile-hover-contato:hover {
+        background-color: var(--cor-projeto);
+        color: var(--cor-secundaria)
+    }
+    .mobile-menu, .nav-item {
+        display: none; 
+        color: var(--cor-secundaria);
+    }
+    .mobile-menu, .mobile-button-contato {
+        display: none;
+    }
+    .mobile-menu.open, .nav-item, .mobile-button-contato {
+        display: block; /* Certificando que os itens aparecem */
+    }
+    .container__contato {
+      display: flex;
+      flex-direction: column;
+      gap: 4em;
+    }
+    .redes {
+      font-size: 2rem;
+    }
+    .contato-box {
+      grid-template-columns: 1fr;
+    }
+    .container-form form {
+      margin: 2em;
+      padding: 1.5em;
+    }
+    .titulo-contato {
+      font-size: 1.7rem;
+    }
+    .contato-box textarea,
+    .contato-box input {
+    font-size: 1em;
+    }
+    .contato-box textarea {
+      margin-bottom: 2em;
+    }
+    .btn {
+      padding: .1em 1.5em;
+      font-size: 1.1em;
+    }
+  }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caio Calomeni | Contato</title>
+    <link rel="stylesheet" href="assets/css/style-contato.css">
+</head>
+<body>
+    <header>
+        <div class="container__header">
+            <div class="logo">
+                <a href="index.html" class="link__logo">
+                    <h3 class="titulo__logo">CAIO CALOMENI</h3>
+                    <p class="texto__logo">Desenvolvedor</p>
+                </a>
+            </div>
+            <div class="container__menus">
+                <nav class="menus">
+                    <a class="menus_home" href="index.html">Início</a>
+                    <a class="menus_sobremim" href="sobre_mim.html">Sobre mim</a>
+                    <a class="menus_projetos" href="projetos.html">Projetos</a>
+            </nav>
+            <nav class="menus contato">
+                <a class="link__contato" href="">Contato</a>
+            </nav>
+            </div>
+            <div class="mobile-menu-icon">
+                <button id="menuButton" onclick="menuShow()">
+                    <img src="Imagens/menu-fill.png" alt="">
+                </button>
+            </div>
+            </div>
+
+            <div class="mobile-menu">
+                <ul class="lista-menus">
+                    <li class="nav-item"><a class="menu-item" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="menu-item" href="sobre_mim.html">Sobre mim</a></li>
+                    <li class="nav-item"><a class="menu-item" href="projetos.html">Projetos</a></li>
+                </ul>
+                <div class="mobile-link-contato">
+                    <a class="menu-item mobile-hover-contato" href="">Contato</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container__contato">
+            <div class="apresentacao__links">
+                <h2 class="redes"><strong>Acesse minhas redes: </h2></strong>
+                <a class="apresentacao__links__link" href="https://www.linkedin.com/in/caio-calomeni/" target="_blank">
+                    <img src="Imagens/Logo linkedin.png" alt=""> LinkedIn</a>
+                <a class="apresentacao__links__link" href="https://github.com/CaioCalomeni" target="_blank"> 
+                    <img src="Imagens/Logo Github.png" alt="">Github</a>
+                <a class="apresentacao__links__link" href="https://www.instagram.com/caiocalomeni/" target="_blank">
+                    <img src="Imagens/instagram.png" alt="">Instagram</a>
+            </div>
+            <div class="container-form">
+                <form action="https://formspree.io/f/mkgjwqee" method="POST">
+                    <h2 class="titulo-contato"><strong>Entre em contato</h2></strong>
+                    <div class="contato-box">
+                        <input type="text" name="nome"  placeholder="Nome completo" required>
+                        <input type="email" name="email" placeholder="Endereço de E-mail" required>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Número de telefone" required>
+                        <input type="text" name="titulo" placeholder="Título do e-mail" required>
+                        <textarea name="" name="mensagem" id=""placeholder='Sua mensagem'></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
