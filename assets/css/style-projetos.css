@@ -306,4 +306,7 @@ nav a:hover {
   .projetos__card {
   background-color: var(--cor-hover);
   }
+  .projetos__card:hover {
+  background-color: #11253a;
+  }
 }
