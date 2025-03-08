@@ -202,7 +202,7 @@ nav a:hover {
     }
     .imagem__caio {
         width: 75%;
-/*         margin-bottom: 10%; */
+        margin-bottom: 30px;
     }
     .apresentacao__conteudo__para2 {
         width: 100%;
@@ -210,19 +210,9 @@ nav a:hover {
         text-align: justify;
     }
     .apresentacao__conteudo2 {
-        flex-grow: 1;
         width: 100%;
     }
     .rodape {
         font-size: 1rem;
     }
-}
-@media (max-width: 450px) {
-    .apresentacao2 {
-        padding: 2% 5% 15% 5%;
-    }
-    .rodape {
-        font-size: 1rem;
-    }
-    
 }
