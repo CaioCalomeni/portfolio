@@ -16,8 +16,9 @@
   --cor-terciaria: #22D4FD;
   --cor-bloco: #070b0f;
   --cor-hover: #0e161f;
-  --cor-projeto: #030507;
+  --cor-hover-mobile: #11253a;
   --cor-cinza: #808080;
+
 
   --fonte-primaria: 'Krona One', sans-serif;
   --fonte-secundaria: 'Montserrat', sans-serif;
@@ -139,7 +140,7 @@ margin-right: 3em;
 }
 .link__contato:hover, .mobile-hover-contato:hover, .menu-item:hover {
   background-color: var(--cor-terciaria);
-  color: var(--cor-projeto);
+  color: var(--cor-primaria);
 }
 nav a:hover {
   background-color: var(--cor-hover);
@@ -290,7 +291,7 @@ nav a:hover {
       color: var(--cor-primaria)
   }
   a.menu-item.mobile-hover-contato:hover {
-      background-color: var(--cor-projeto);
+      background-color: var(--cor-primaria);
       color: var(--cor-secundaria)
   }
   .mobile-menu, .nav-item {
@@ -304,9 +305,9 @@ nav a:hover {
       display: block; /* Certificando que os itens aparecem */
   }
   .projetos__card {
-  background-color: var(--cor-hover);
+    background-color: var(--cor-hover);
   }
   .projetos__card:hover {
-  background-color: #11253a;
+    background-color: var(--cor-hover-mobile);
   }
 }
