@@ -310,8 +310,4 @@ nav a:hover {
   .projetos__card:hover {
     background-color: var(--cor-hover-mobile);
   }
-  .projetos__card.hover {
-   transform: scale(1.08);
-   background-color: var(--cor-hover-mobile);
-  }
 }
